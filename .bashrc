@@ -6,7 +6,7 @@ DOT_PATH=~/dot_files
 
 
 
-if [ -f $DOT_PATH/.git_completion.sh ] && $DOT_PATH/.git_completion.sh
+[ -f $DOT_PATH/.git_completion.sh ] && . $DOT_PATH/.git_completion.sh
 
 # aliases
 alias ll='ls -alF'
