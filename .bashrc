@@ -27,3 +27,6 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../.."
+
+# iterate over folders and add bin directories to the path
+for bin_dir in /package_root/*/bin; do export PATH=$bin_dir:$PATH; done
