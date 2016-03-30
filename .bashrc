@@ -28,5 +28,11 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../.."
 
+# tmux shorcuts
+tmux_attach(){
+  tmux attach -t $1
+}
+alias tt=tmux_attach
+
 # iterate over folders and add bin directories to the path
 for bin_dir in /package_root/*/bin; do export PATH=$bin_dir:$PATH; done
