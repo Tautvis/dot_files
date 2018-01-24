@@ -28,6 +28,8 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../.."
 
+alias gti=git
+
 # tmux shorcuts
 tmux_attach(){
   tmux attach -t $1
