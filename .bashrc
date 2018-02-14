@@ -36,5 +36,9 @@ tmux_attach(){
 }
 alias tt=tmux_attach
 
+# Google cloud
+export PATH=$PATH:~/prog/google-cloud-sdk/bin
+export CLOUDSDK_PYTHON=/usr/local/bin/python
+
 # iterate over folders and add bin directories to the path
 for bin_dir in /package_root/*/bin; do export PATH=$bin_dir:$PATH; done
