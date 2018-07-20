@@ -30,11 +30,27 @@ alias ........="cd ../../../../../../.."
 
 alias gti=git
 
+alias pipupdate='pip freeze | cut -d= -f1 | pip install -U -r /dev/stdin'
+
 # tmux shorcuts
 tmux_attach(){
   tmux attach -t $1
 }
 alias tt=tmux_attach
+
+# conda env
+cenv(){
+	current_dir=`pwd`
+	while [ `pwd` != "/" ]; do
+		if [ -d ".git" ]; then 
+			source activate $(basename $(pwd))
+			break
+		fi
+		cd ..
+	done
+	[ `pwd` != '/' ] || echo "Could not find any git repo root to match conda environment."
+	cd $current_dir
+}
 
 # Google cloud
 export PATH=$PATH:~/prog/google-cloud-sdk/bin
